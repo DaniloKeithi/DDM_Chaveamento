@@ -8,149 +8,133 @@
 </head>
 <body>
     <div class="container">
-        <h1>Simulação do Campeonato Mata-Mata</h1>
+        <h1>Chaveamento Interclasse 2024 - ETEC MCM</h1>
 
-        <!-- Oitavas de Final -->
+
         <section class="round" id="oitavas">
             <h2>Oitavas de Final</h2>
             <div class="match" id="match1">
-                <input type="text" id="team1A" value="Time A" disabled />
-                <input type="number" id="score1A" placeholder="Placar Time A" />
+                <input type="text" id="team1A" value="1A" disabled />
+                <input type="number" id="score1A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="score1B" placeholder="Placar Time B" />
-                <input type="text" id="team1B" value="Time B" disabled />
-                <button onclick="proximo(1)">Avançar</button>
+                <input type="number" id="score1B" placeholder="Gols" />
+                <input type="text" id="team1B" value="1B" disabled />
             </div>
             <div class="match" id="match2">
-                <input type="text" id="team2A" value="Time C" disabled />
-                <input type="number" id="score2A" placeholder="Placar Time C" />
+                <input type="text" id="team2A" value="1C" disabled />
+                <input type="number" id="score2A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="score2B" placeholder="Placar Time D" />
-                <input type="text" id="team2B" value="Time D" disabled />
-                <button onclick="proximo(1)">Avançar</button>
+                <input type="number" id="score2B" placeholder="Gols" />
+                <input type="text" id="team2B" value="1D" disabled />
             </div>
             <div class="match" id="match3">
-                <input type="text" id="team3A" value="Time E" disabled />
-                <input type="number" id="score3A" placeholder="Placar Time E" />
+                <input type="text" id="team3A" value="2A" disabled />
+                <input type="number" id="score3A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="score3B" placeholder="Placar Time F" />
-                <input type="text" id="team3B" value="Time F" disabled />
-                <button onclick="proximo(1)">Avançar</button>
+                <input type="number" id="score3B" placeholder="Gols" />
+                <input type="text" id="team3B" value="2B" disabled />
             </div>
             <div class="match" id="match4">
-                <input type="text" id="team4A" value="Time G" disabled />
-                <input type="number" id="score4A" placeholder="Placar Time G" />
+                <input type="text" id="team4A" value="2C" disabled />
+                <input type="number" id="score4A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="score4B" placeholder="Placar Time H" />
-                <input type="text" id="team4B" value="Time H" disabled />
-                <button onclick="proximo(1)">Avançar</button>
+                <input type="number" id="score4B" placeholder="Gols" />
+                <input type="text" id="team4B" value="2D" disabled />
             </div>
             <div class="match" id="match5">
-                <input type="text" id="team5A" value="Time I" disabled />
-                <input type="number" id="score5A" placeholder="Placar Time I" />
+                <input type="text" id="team5A" value="3A" disabled />
+                <input type="number" id="score5A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="score5B" placeholder="Placar Time J" />
-                <input type="text" id="team5B" value="Time J" disabled />
-                <button onclick="proximo(1)">Avançar</button>
+                <input type="number" id="score5B" placeholder="Gols" />
+                <input type="text" id="team5B" value="3B" disabled />
             </div>
             <div class="match" id="match6">
-                <input type="text" id="team6A" value="Time K" disabled />
-                <input type="number" id="score6A" placeholder="Placar Time K" />
+                <input type="text" id="team6A" value="3C" disabled />
+                <input type="number" id="score6A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="score6B" placeholder="Placar Time L" />
-                <input type="text" id="team6B" value="Time L" disabled />
-                <button onclick="proximo(1)">Avançar</button>
+                <input type="number" id="score6B" placeholder="Gols" />
+                <input type="text" id="team6B" value="3D" disabled />
             </div>
             <div class="match" id="match7">
-                <input type="text" id="team7A" value="Time M" disabled />
-                <input type="number" id="score7A" placeholder="Placar Time M" />
+                <input type="text" id="team7A" value="9A" disabled />
+                <input type="number" id="score7A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="score7B" placeholder="Placar Time N" />
-                <input type="text" id="team7B" value="Time N" disabled />
-                <button onclick="proximo(1)">Avançar</button>
+                <input type="number" id="score7B" placeholder="Gols" />
+                <input type="text" id="team7B" value="9B" disabled />
             </div>
             <div class="match" id="match8">
-                <input type="text" id="team8A" value="Time O" disabled />
-                <input type="number" id="score8A" placeholder="Placar Time O" />
+                <input type="text" id="team8A" value="9C" disabled />
+                <input type="number" id="score8A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="score8B" placeholder="Placar Time P" />
-                <input type="text" id="team8B" value="Time P" disabled />
-                <button onclick="proximo(1)">Avançar</button>
+                <input type="number" id="score8B" placeholder="Gols" />
+                <input type="text" id="team8B" value="9D" disabled />
             </div>
-            <!-- Outros 7 jogos -->
-            <!-- O formato para outros confrontos será similar -->
+            <button id="botaoAvancarOitavas" onclick="avancarFase(1)">Avançar para Quartas de Final</button>
         </section>
 
-        <!-- Quartas de Final -->
+    
         <section class="round" id="quartas" style="display: none;">
             <h2>Quartas de Final</h2>
             <div class="match" id="matchQ1">
                 <input type="text" id="teamQ1A" disabled />
-                <input type="number" id="scoreQ1A" placeholder="Placar Time A" />
+                <input type="number" id="scoreQ1A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="scoreQ1B" placeholder="Placar Time B" />
+                <input type="number" id="scoreQ1B" placeholder="Gols" />
                 <input type="text" id="teamQ1B" disabled />
-                <button onclick="proximo(2)">Avançar</button>
             </div>
             <div class="match" id="matchQ2">
                 <input type="text" id="teamQ2A" disabled />
-                <input type="number" id="scoreQ2A" placeholder="Placar Time A" />
+                <input type="number" id="scoreQ2A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="scoreQ2B" placeholder="Placar Time B" />
+                <input type="number" id="scoreQ2B" placeholder="Gols" />
                 <input type="text" id="teamQ2B" disabled />
-                <button onclick="proximo(2)">Avançar</button>
             </div>
             <div class="match" id="matchQ3">
                 <input type="text" id="teamQ3A" disabled />
-                <input type="number" id="scoreQ3A" placeholder="Placar Time A" />
+                <input type="number" id="scoreQ3A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="scoreQ3B" placeholder="Placar Time B" />
+                <input type="number" id="scoreQ3B" placeholder="Gols" />
                 <input type="text" id="teamQ3B" disabled />
-                <button onclick="proximo(2)">Avançar</button>
             </div>
             <div class="match" id="matchQ4">
                 <input type="text" id="teamQ4A" disabled />
-                <input type="number" id="scoreQ4A" placeholder="Placar Time A" />
+                <input type="number" id="scoreQ4A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="scoreQ4B" placeholder="Placar Time B" />
+                <input type="number" id="scoreQ4B" placeholder="Gols" />
                 <input type="text" id="teamQ4B" disabled />
-                <button onclick="proximo(2)">Avançar</button>
             </div>
-            <!-- Adicionar outros 3 confrontos -->
+            <button id="botaoAvancarOitavas" onclick="avancarFase(2)">Avançar para Semi-Finais</button>
         </section>
 
-        <!-- Semifinais -->
         <section class="round" id="semifinal" style="display: none;">
             <h2>Semifinal</h2>
             <div class="match" id="matchS1">
                 <input type="text" id="teamS1A" disabled />
-                <input type="number" id="scoreS1A" placeholder="Placar Time A" />
+                <input type="number" id="scoreS1A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="scoreS1B" placeholder="Placar Time B" />
-                <input type="text" id="teamS1B" disabled />
-                <button onclick="proximo(3)">Avançar</button>
+                <input type="number" id="scoreS1B" placeholder="Gols" />
+                <input type="text" id="teamS1B" disabled /> 
             </div>
             <div class="match" id="matchS2">
                 <input type="text" id="teamS2A" disabled />
-                <input type="number" id="scoreS2A" placeholder="Placar Time A" />
+                <input type="number" id="scoreS2A" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="scoreS2B" placeholder="Placar Time B" />
+                <input type="number" id="scoreS2B" placeholder="Gols" />
                 <input type="text" id="teamS2B" disabled />
-                <button onclick="proximo(3)">Avançar</button>
             </div>
+            <button id="botaoAvancarOitavas" onclick="avancarFase(3)">Avançar para Final</button>
         </section>
 
-        <!-- Final -->
         <section class="round" id="final" style="display: none;">
             <h2>Final</h2>
             <div class="match" id="matchF">
                 <input type="text" id="teamFA" disabled />
-                <input type="number" id="scoreFA" placeholder="Placar Time A" />
+                <input type="number" id="scoreFA" placeholder="Gols" />
                 <span>vs</span>
-                <input type="number" id="scoreFB" placeholder="Placar Time B" />
+                <input type="number" id="scoreFB" placeholder="Gols" />
                 <input type="text" id="teamFB" disabled />
-                <button onclick="proximo(4)">Avançar</button>
             </div>
+            <button id="botaoAvancarOitavas" onclick="avancarFase(4)">Ver o Campeão</button>
         </section>
 
         <div id="campeao" style="display: none;">

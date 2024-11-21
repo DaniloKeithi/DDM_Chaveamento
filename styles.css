@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1200px; /* Aumenta a largura para telas grandes */
     margin: 0 auto;
     text-align: center;
 }
@@ -30,17 +30,19 @@ h2 {
 }
 
 .match {
-    margin-bottom: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 10px;
+    gap: 20px;
 }
 
 .match input {
-    width: 100px;
+    width: 70px; /* Ajusta os inputs para ficarem menores */
     text-align: center;
     padding: 5px;
-    margin: 0 10px;
+    margin: 5px;
+    font-size: 14px;
 }
 
 button {
@@ -49,6 +51,10 @@ button {
     color: white;
     border: none;
     cursor: pointer;
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 button:hover {
@@ -59,4 +65,60 @@ button:hover {
     margin-top: 40px;
     font-size: 28px;
     font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    /* Para telas médias, ajustando a largura dos inputs e botões */
+    .match {
+        flex-direction: row; /* Manter os itens em linha */
+        gap: 15px; /* Reduz o espaço entre os itens */
+    }
+
+    .match input {
+        width: 50px; /* Menor largura para se ajustar melhor */
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+
+    button {
+        width: 200px; /* Reduz o tamanho do botão */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para telas menores (tablets) */
+    .match {
+        flex-direction: row; /* Manter os itens em linha */
+        gap: 10px; /* Menor espaço entre os itens */
+    }
+
+    .match input {
+        width: 50px; /* Largura menor dos inputs */
+        font-size: 12px; /* Ajusta o tamanho da fonte */
+    }
+
+    button {
+        width: 100%; /* Botão ocupa toda a largura disponível */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para telas pequenas (celulares) */
+    .match {
+        flex-direction: row; /* Manter os itens em linha */
+        gap: 5px; /* Menor espaço entre os itens */
+    }
+
+    .match input {
+        width: 40px; /* Inputs ainda menores */
+        font-size: 10px; /* Fonte menor */
+    }
+
+    button {
+        width: 100%; /* Botão ocupa toda a largura disponível */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    #campeao {
+        font-size: 20px; /* Ajusta o tamanho da fonte para telas pequenas */
+    }
 }

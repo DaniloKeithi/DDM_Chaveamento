@@ -1,6 +1,6 @@
 let timesOitavas = [
-    "Time A", "Time B", "Time C", "Time D", "Time E", "Time F", "Time G", "Time H",
-    "Time I", "Time J", "Time K", "Time L", "Time M", "Time N", "Time O", "Time P"
+    "1A", "1B", "1C", "1D", "2A", "2B", "2C", "2D",
+    "3A", "3B", "3C", "3D", "9A", "9B", "9C", "9D"
 ];
 
 let quartas = [];
@@ -8,11 +8,11 @@ let semifinal = [];
 let finalistas = [];
 let campeao = "";
 
-function proximo(fase) {
+function avancarFase(fase) {
     let winner = "";
 
     if (fase === 1) {
-        // Oitavas de Final
+
         for (let i = 1; i <= 8; i++) {
             let scoreA = parseInt(document.getElementById(`score${i}A`).value) || 0;
             let scoreB = parseInt(document.getElementById(`score${i}B`).value) || 0;
@@ -23,8 +23,15 @@ function proximo(fase) {
             quartas.push(winner);
             alert(`${winner} avançou para as Quartas de Final!`);
         }
+
+
+        for (let i = 1; i <= 4; i++) {
+            document.getElementById(`teamQ${i}A`).value = quartas[i * 2 - 2];
+            document.getElementById(`teamQ${i}B`).value = quartas[i * 2 - 1];
+        }
+
     } else if (fase === 2) {
-        // Quartas de Final
+
         for (let i = 1; i <= 4; i++) {
             let scoreA = parseInt(document.getElementById(`scoreQ${i}A`).value) || 0;
             let scoreB = parseInt(document.getElementById(`scoreQ${i}B`).value) || 0;
@@ -35,8 +42,15 @@ function proximo(fase) {
             semifinal.push(winner);
             alert(`${winner} avançou para as Semifinais!`);
         }
+
+
+        for (let i = 1; i <= 2; i++) {
+            document.getElementById(`teamS${i}A`).value = semifinal[i * 2 - 2];
+            document.getElementById(`teamS${i}B`).value = semifinal[i * 2 - 1];
+        }
+
     } else if (fase === 3) {
-        // Semifinal
+
         for (let i = 1; i <= 2; i++) {
             let scoreA = parseInt(document.getElementById(`scoreS${i}A`).value) || 0;
             let scoreB = parseInt(document.getElementById(`scoreS${i}B`).value) || 0;
@@ -47,15 +61,20 @@ function proximo(fase) {
             finalistas.push(winner);
             alert(`${winner} avançou para a Final!`);
         }
+
+
+        document.getElementById(`teamFA`).value = finalistas[0];
+        document.getElementById(`teamFB`).value = finalistas[1];
+
     } else if (fase === 4) {
-        // Final
+
         let scoreA = parseInt(document.getElementById("scoreFA").value) || 0;
         let scoreB = parseInt(document.getElementById("scoreFB").value) || 0;
         let teamA = document.getElementById("teamFA").value;
         let teamB = document.getElementById("teamFB").value;
 
         campeao = scoreA > scoreB ? teamA : teamB;
-        localStorage.setItem("campeao", campeao); // Salva o campeão no localStorage
+        localStorage.setItem("campeao", campeao); 
         document.getElementById("winnerName").textContent = campeao;
         alert(`${campeao} é o Campeão!`);
     }
@@ -83,6 +102,7 @@ function atualizarFases() {
     }
 
 }
+
 function mostrarGanhador() {
-    window.location.href = "ganhador.html"; // Redireciona para a página do ganhador
+    window.location.href = "ganhador.html"; 
 }
