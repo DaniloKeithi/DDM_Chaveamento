@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campeão do Torneio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Campeão do Torneio</h1>
+        <p>Parabéns ao <strong id="campeaoNome">Campeão</strong>!</p>
+        <button onclick="voltar()">Voltar para o Torneio</button>
+    </div>
+
+    <script>
+        // Pega o nome do campeão e exibe na página
+        const campeao = localStorage.getItem("campeao");
+        document.getElementById("campeaoNome").textContent = campeao;
+
+        // Função para voltar para a página inicial
+        function voltar() {
+            window.location.href = "index.html"; // Redireciona para a página do torneio
+        }
+    </script>
+</body>
+</html>
